@@ -66,12 +66,11 @@ func main() {
 		Model:       model,
 		Description: "An agent that can answer questions about weather and current time.",
 		Instruction: `You are a helpful assistant that answers questions about weather and current time.
-
-When the user asks about weather or time:
-1. Call the appropriate tool (getWeather or getCurrentTime) with the city name.
-2. The tool returns a JSON object with "status" and "report" fields.
-3. If status is "success", answer the user in natural language using the content of the "report" field.
-4. If the tool returns an error, apologize and explain the issue to the user.
+		              When the user asks about weather or time:
+					  1. Call the appropriate tool (getWeather or getCurrentTime) with the city name.
+					  2. The tool returns a JSON object with "status" and "report" fields.
+					  3. If status is "success", answer the user in natural language using the content of the "report" field.
+					  4. If the tool returns an error, apologize and explain the issue to the user.
 
 Always present the tool's report content to the user — do not stop after just calling the tool.`,
 		Tools: []tool.Tool{
